@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Babylon.src {
     
     //Class that holds the Pages that are contained in a book
     //Each page has a defined amount of lines with a lenght of 85
-    public class Page {
+    public class Page  {
         //Each page contains 8 lines
         private static String[] lines = new String[8]; 
         //Length per line in characters
@@ -16,21 +17,7 @@ namespace Babylon.src {
 
         //list of accepted characters;
         //it includes the alphabet, the . , and space
-        public char[] acceptedChars = {
-            'a', 'b', 'c', 'd', 'e', 
-            'f', 'g', 'h', 'i', 'j', 
-            'k', 'l', 'm', 'n', 'o', 
-            'p', 'q', 'r', 's', 't', 
-            'u', 'v', 'w', 'x', 'y', 
-            'z', '.', ',', ' '
-        };
-        private Random rnd;
-        //method that fills a line
-        public void fillLine() {
-            //gets a random number
-            rnd = new Random();
-            rnd.
-        }
+        
     }
 
     class babBook {
@@ -41,13 +28,13 @@ namespace Babylon.src {
         //Each book contains 
         private Page[] bookPages = new Page[410];
 
-        //constructor
+        //constructors
+        public babBook() { }
+        //constructor w args
         public babBook(string titulo) {
             title = titulo;
-        }
-
-        
-        
+        }       
         //Method to show the contents of each page
     }
+
 }

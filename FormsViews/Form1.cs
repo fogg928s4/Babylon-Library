@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Babylon.src;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,15 @@ namespace Babylon {
     public partial class Form1 : Form {
         public Form1() {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e) {
+
+
+            Label pagina = new Label();
+            pagina.Text = Universe.createWisdom(80);
+            pagina.Width = 1000;
+            this.Controls.Add( pagina );
         }
     }
 }
