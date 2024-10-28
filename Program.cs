@@ -15,7 +15,7 @@ namespace Babylon {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new mainForm());
 
             //We create a new Book 
                     
