@@ -21,13 +21,13 @@ namespace Babylon.src {
         //method that gets a random string 
         public static string createWisdom(int length) {
             //gets a random number
-            int n = 0;
+            
             String wisdom = ""; //the randomized string
             Random rnd = new Random();
 
             for (int i = 0; i<= length; i++) {
-                n = rnd.Next(0,acceptedChars.Length - 1);
-                wisdom+=acceptedChars[n];
+                
+                wisdom+=acceptedChars[rnd.Next(0, acceptedChars.Length - 1)];
             }
 
             return wisdom;

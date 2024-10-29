@@ -17,30 +17,35 @@ namespace Babylon.src {
         //the lines of each page
         public String[] renglones = new String[8];
 
-        
+
         //Constructor
-        public Page() {
-            this.ReadOnly = true;
+        public Page(string s) {
+            //this.ReadOnly = true;
+            this.Name = s;
             this.Multiline = true;
-            this.Width = 500;
-            this.Lines = [
-                Universe.createWisdom(80), //Line 1
-                Universe.createWisdom(80), //Line 2
-                Universe.createWisdom(80), //Line 3
-                Universe.createWisdom(80), //Line 4
-                Universe.createWisdom(80), //Line 5
-                Universe.createWisdom(80), //Line 7
-                Universe.createWisdom(80), //Line 6
-                Universe.createWisdom(80), //Line 8
-            ];
-            
+            this.Width = 920;
+            this.Height = 360;
+            this.Lines = new string[8];
+            fillPage();
+        }
+        public Page() {
+            //this.ReadOnly = true;
+
+            this.Multiline = true;
+            this.Width = 920;
+            this.Height = 360;
+            this.Lines = new string[8];
             fillPage();
         }
 
         //This will fill each lne of the page with random stuff
         public void fillPage() {
+
             for (int i = 0; i < 8; i++) {
-                Lines[i] = Universe.createWisdom(80);
+                this.Lines[i] = Universe.createWisdom(80);
+                this.Text += this.Lines[i];
+                this.Text += "\r\n";
+
             }
         }
     }
